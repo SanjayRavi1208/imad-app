@@ -13,5 +13,5 @@ function moveRight()
 }
 sansa.onclick=function()
 {
-    var interval=setInterval(moveRight,50);
+    var interval=setInterval(moveRight,500);
 }
