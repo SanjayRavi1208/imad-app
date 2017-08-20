@@ -8,6 +8,8 @@ function moveRight()
 {
     marginLeft=marginLeft+10;
     sansa.style.marginLeft=marginLeft+'px';
+    if(marginLeft==500)
+    marginLeft=0;
 }
 sansa.onclick=function()
 {
