@@ -1,6 +1,4 @@
 console.log('Loaded!');
-var element=document.getElementById('main.text');
-element.innerHTML="Don't touch me!!!..plzzzzz";
 //Moving Image
 var img=document.getElementById('sansa');
 var marginLeft=0;
