@@ -13,3 +13,10 @@ sansa.onclick=function()
 {
     var interval=setInterval(moveRight,500);
 }
+var button=document.getElementById('counter');
+button.onclick=function()
+{
+    counter=counter+1;
+    var span=document.getElementBy('count');
+    span.innerHTML=counter.toString();
+}
