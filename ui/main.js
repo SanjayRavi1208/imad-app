@@ -6,7 +6,7 @@ var img=document.getElementById('sansa');
 var marginLeft=0;
 function moveRight()
 {
-    marginLeft=marginLeft+100;
+    marginLeft=marginLeft+10;
     sansa.style.marginLeft=marginLeft+'px';
 }
 sansa.onclick=function()
