@@ -1,6 +1,6 @@
 console.log('Loaded!');
 var element=document.getElementById('main.text');
-element.innerHTML='Idhoda KAAAIYAAA amukuda Bieber!!!';
+element.innerHTML="Don't Touch me!!!....plzzzz";
 //Moving Image
 var img=document.getElementById('sansa');
 var marginLeft=0;
