@@ -1,4 +1,4 @@
-console.log('Loaded!');
+/*console.log('Loaded!');
 //Moving Image
 var img=document.getElementById('sansa');
 var marginLeft=0;
@@ -12,11 +12,11 @@ function moveRight()
 sansa.onclick=function()
 {
     var interval=setInterval(moveRight,500);
-}
+}*/
 var button=document.getElementById('counter');
 button.onclick=function()
 {
     counter=counter+1;
-    var span=document.getElementBy('count');
+    var span=document.getElementById('count');
     span.innerHTML=counter.toString();
 }
