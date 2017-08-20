@@ -1,6 +1,6 @@
 console.log('Loaded!');
 var element=document.getElementById('main.text');
-element.innerHTML="Don't Touch me!!!....plzzzz";
+element.innerHTML="Don't press my boops!!!....plzzzz";
 //Moving Image
 var img=document.getElementById('sansa');
 var marginLeft=0;
