@@ -1,6 +1,6 @@
 console.log('Loaded!');
 var element=document.getElementById('main.text');
-element.innerHTML='newvalue';
+element.innerHTML='Idhoda KAAAIYAAA amukuda Bieber!!!';
 //Moving Image
 var img=document.getElementById('sansa');
 var marginLeft=0;
