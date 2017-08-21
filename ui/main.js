@@ -38,7 +38,7 @@ sub.onclick=function()
     var list='';
     for(var i=0;i<arr.length;i++)
     {
-        list='<li>'+arr[0]+'<li>';
+        list=list+'<li>'+arr[0]+'<li>';
     }
     uld.innerHTML=list;
 };
