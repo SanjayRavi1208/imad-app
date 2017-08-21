@@ -1,4 +1,4 @@
-/*console.log('Loaded!');
+console.log('Loaded!');
 //Moving Image
 var img=document.getElementById('sansa');
 var marginLeft=0;
@@ -28,7 +28,7 @@ button.onclick=function()
     };
     request.open('GET','http://sanjaykr1208.imad.hasura-app.io/counter',true);
     request.send(null);
-};*/
+};
 var submit=document.getElementById('sub');
 submit.onclick=function()
 {
