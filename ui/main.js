@@ -29,3 +29,15 @@ button.onclick=function()
     request.open('GET','http://sanjaykr1208.imad.hasura-app.io/counter',true);
     request.send(null);
 };
+var submit=document.getElementById('sub');
+sub.onclick=function()
+{
+    var arr=['sanjay','arsath','sathvik'];
+    var name=document.getElementById('uld');
+    var list='';
+    for(var i=0;i<arr.length;i++)
+    {
+        list='<li>'+arr[0]+'<li>';
+    }
+    uld.innerHTML=list;
+};
