@@ -31,7 +31,7 @@ button.onclick=function()
 };*/
 var submit=document.getElementById('sub');
 var nameinput=document.getElementById('name');
-var inputname=nameinput.value;
+var name1=nameinput.value;
 sub.onclick=function()
 {
     var request=new XMLHttpRequest();
@@ -51,6 +51,6 @@ sub.onclick=function()
             
         }
     }
-    request.open('GET','http://sanjaykr1208.imad.hasura-app.io/sub-name?name='+inputname,true);
+    request.open('GET','http://sanjaykr1208.imad.hasura-app.io/sub-name?name='+name1,true);
     request.send(null);
 };
