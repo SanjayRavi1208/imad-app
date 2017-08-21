@@ -30,7 +30,6 @@ button.onclick=function()
     request.send(null);
 };
 var submit=document.getElementById('sub');
-var change=document.getElementById('uld');
 var nameinput=document.getElementById('frm');
 var inputname=nameinput.value;
 sub.onclick=function()
@@ -47,6 +46,7 @@ sub.onclick=function()
             {
                 list+='<li>'+text[i]+'</li>';
             }
+            var change=document.getElementById('uld');
             change.innerHTML=list;
             
         }
