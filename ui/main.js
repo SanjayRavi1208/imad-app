@@ -38,7 +38,7 @@ sub.onclick=function()
     var req=new XMLHttpRequest();
     req.onreadystatechange=function()
     {
-        if(request.readystate==XMLHttpRequest.DONE&&request.status===200)
+        if(req.readystate==XMLHttpRequest.DONE&&req.status===200)
         {
             var text=req.responseText;
             text=JSON.parse(text);
