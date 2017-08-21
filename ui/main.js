@@ -35,14 +35,13 @@ submit.onclick=function()
     var request=new XMLHttpRequest();
     request.onreadystatechange=function()
     {
-        if(request.readystate===XMLHttpRequest.DONE)
+        if(request.readyState===XMLHttpRequest.DONE)
         {
             if(request.status===200)
             {
                 var text=request.responseText;
                 text=JSON.parse(text);
                 var list='';
-                console.log(text[0]);
                 for(var i=0;i<text.length;i++)
                 {
                     console.log("nmann");
