@@ -21,10 +21,9 @@ button.onclick=function()
     {
         if(request.readyState===XMLHttpRequest.DONE&&request.status===200)
         {
-                   console.log('jhgjshdgjfsh');
                    var counter=request.responseText;
-                var span=document.getElementById('count');
-                span.innerHTML=counter.toString();
+                   var span=document.getElementById('count');
+                   span.innerHTML=counter.toString();
         }
     };
     request.open('GET','http://sanjaykr1208.imad.hasura-app.io/counter',true);
