@@ -31,6 +31,6 @@ button.onclick=function()
                }
         }
     };
+    request.open('GET','http://sanjaykr1208.imad.hasura-app.io/counter',true);
+    request.send(null);
 };
-request.open('GET','http://sanjaykr1208.imad.hasura-app.io/counter',true);
-request.send(null);
