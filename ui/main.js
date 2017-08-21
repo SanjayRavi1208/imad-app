@@ -35,20 +35,22 @@ sub.onclick=function()
     var request=new XMLHttpRequest();
     request.onreadystatechange=function()
     {
-        if(request.readystate===XMLHttpRequest.DONE&&request.status===200)
+        if(request.readystate===XMLHttpRequest.DONE)
         {
-            var text=request.responseText;
-            text=JSON.parse(text);
-            var list='';
-            console.log(text[0]);
-            for(var i=0;i<text.length;i++)
+            if(request.status===200)
             {
-                console.log("nmann");
-                list+='<li>'+text[i]+'</li>';
-            }
-            var change=document.getElementById('uld');
-            change.innerHTML=list;
-            
+                var text=request.responseText;
+                text=JSON.parse(text);
+                var list='';
+                console.log(text[0]);
+                for(var i=0;i<text.length;i++)
+                {
+                    console.log("nmann");
+                    list+='<li>'+text[i]+'</li>';
+                }
+                var change=document.getElementById('uld');
+                change.innerHTML=list;
+            }   
         }
     };
     var nameinput=document.getElementById('name');
