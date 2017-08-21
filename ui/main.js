@@ -25,7 +25,7 @@ button.onclick=function()
             var span=document.getElementById('count');
             span.innerHTML=counter.toString();
         }
-    }
+    };
+};
 request.open('GET','http://sanjaykr1208.imad.hasura-app.io/counter');
 request.send(null);
-};
