@@ -32,6 +32,7 @@ button.onclick=function()
 var submit=document.getElementById('sub');
 sub.onclick=function()
 {
+    console.log("asdaskfj");
     var arr=['sanjay','arsath','sathvik'];
     var name=document.getElementById('uld');
     var list='';
