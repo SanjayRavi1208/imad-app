@@ -30,7 +30,7 @@ button.onclick=function()
     request.send(null);
 };*/
 var submit=document.getElementById('sub');
-sub.onclick=function()
+submit.onclick=function()
 {
     var request=new XMLHttpRequest();
     request.onreadystatechange=function()
@@ -48,7 +48,7 @@ sub.onclick=function()
                     console.log("nmann");
                     list+='<li>'+text[i]+'</li>';
                 }
-                var change=document.getElementById('uld');
+                var change=document.getElementById('udlist');
                 change.innerHTML=list;
             }   
         }
