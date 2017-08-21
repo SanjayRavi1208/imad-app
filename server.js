@@ -98,7 +98,7 @@ app.get('/counter',function(req,res)
 var names=[];
 app.get('/sub-name',function(req,res)
 {
-    var nam=rqe.query.name;
+    var nam=req.query.name;
     names.push(nam);
     res.send(JSON.stringify(names));
     
