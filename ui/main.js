@@ -48,7 +48,7 @@ sub.onclick=function()
             change.innerHTML=list;
             
         }
-    }
+    };
     var nameinput=document.getElementById('name');
     var name1=nameinput.value;
     request.open('GET','http://sanjaykr1208.imad.hasura-app.io/sub-name?name='+name1,true);
