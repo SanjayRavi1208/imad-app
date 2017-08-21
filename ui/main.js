@@ -13,7 +13,7 @@ sansa.onclick=function()
 {
     var interval=setInterval(moveRight,500);
 };
-var button=DOCUMENT.getElementById('counter');
+var button=document.getElementById('counter');
 button.onclick=function()
 {
     var request=new XMLHttpRequest();
