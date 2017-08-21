@@ -101,9 +101,9 @@ app.get('/:articleName',function(req,res)
       res.send(createTemplate(articles[articleName]));
 });
 var names=[];
-app.get('/sub-name/:name',function(req,res)
+app.get('/sub-name',function(req,res)
 {
-    var nam=req.params.name;
+    var nam=query.name;
     names.push(nam);
     res.send(JSON.stringify(names));
     
