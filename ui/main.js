@@ -51,6 +51,6 @@ sub.onclick=function()
             
         }
     }
-    request.open('GET','http://sanjaykr1208.imad.hasura-app.io/sub-name?name='+nameinput,true);
-    request.send(null);
+    req.open('GET','http://sanjaykr1208.imad.hasura-app.io/sub-name?name='+nameinput,true);
+    req.send(null);
 };
