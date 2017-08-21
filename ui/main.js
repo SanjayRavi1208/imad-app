@@ -32,13 +32,12 @@ button.onclick=function()
 var submit=document.getElementById('sub');
 sub.onclick=function()
 {
-    console.log("asdaskfj");
     var arr=['sanjay','arsath','sathvik'];
     var name=document.getElementById('uld');
     var list='';
     for(var i=0;i<arr.length;i++)
     {
-        list=list+'<li>'+arr[0]+'<li>';
+        list+='<li>'+arr[0]+'<li>';
     }
     name.innerHTML=list;
 };
