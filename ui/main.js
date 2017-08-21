@@ -16,7 +16,6 @@ sansa.onclick=function()
 var button=document.getElementById('counter');
 button.onclick=function()
 {
-    console.log("FUCKKK");
     var request=new XMLHttpRequest();
     request.onreadystatechange=function()
     {
@@ -31,6 +30,6 @@ button.onclick=function()
                }
         }
     };
-    request.open('GET','http://sanjaykr1208.imad.hasura-app.io/counter',true);
+    request.open('GET','http://sanjaykr1208.imad.hasura-app.io/counter');
     request.send(null);
 };
