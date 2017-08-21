@@ -40,6 +40,7 @@ sub.onclick=function()
             var text=request.responseText;
             text=JSON.parse(text);
             var list='';
+            console.log(text[0]);
             for(var i=0;i<text.length;i++)
             {
                 console.log("nmann");
