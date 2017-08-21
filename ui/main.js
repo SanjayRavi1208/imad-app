@@ -1,4 +1,4 @@
-console.log('Loaded!');
+/*console.log('Loaded!');
 //Moving Image
 var img=document.getElementById('sansa');
 var marginLeft=0;
@@ -28,18 +28,18 @@ button.onclick=function()
     };
     request.open('GET','http://sanjaykr1208.imad.hasura-app.io/counter',true);
     request.send(null);
-};
+};*/
 var submit=document.getElementById('sub');
-var nameinput=document.getElementById('frm');
+var nameinput=document.getElementById('name');
 var inputname=nameinput.value;
 sub.onclick=function()
 {
-    var req=new XMLHttpRequest();
-    req.onreadystatechange=function()
+    var request=new XMLHttpRequest();
+    request.onreadystatechange=function()
     {
-        if(req.readystate==XMLHttpRequest.DONE&&req.status===200)
+        if(request.readystate==XMLHttpRequest.DONE&&request.status===200)
         {
-            var text=req.responseText;
+            var text=request.responseText;
             text=JSON.parse(text);
             var list='';
             for(var i=0;i<text.length;i++)
@@ -51,6 +51,6 @@ sub.onclick=function()
             
         }
     }
-    req.open('GET','http://sanjaykr1208.imad.hasura-app.io/sub-name?name='+nameinput,true);
-    req.send(null);
+    request.open('GET','http://sanjaykr1208.imad.hasura-app.io/sub-name?name='+inputname,true);
+    request.send(null);
 };
