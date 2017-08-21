@@ -42,6 +42,7 @@ sub.onclick=function()
             var list='';
             for(var i=0;i<text.length;i++)
             {
+                console.log("nmann");
                 list+='<li>'+text[i]+'</li>';
             }
             var change=document.getElementById('uld');
