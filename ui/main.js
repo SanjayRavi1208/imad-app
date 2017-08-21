@@ -40,5 +40,5 @@ sub.onclick=function()
     {
         list=list+'<li>'+arr[0]+'<li>';
     }
-    uld.innerHTML=list;
+    name.innerHTML=list;
 };
