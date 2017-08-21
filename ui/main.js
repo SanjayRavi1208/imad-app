@@ -18,7 +18,6 @@ button.onclick=function()
 {
     console.log("FUCKKK");
     var request=new XMLHttpRequest();
-    t
     request.onreadystatechange=function()
     {
         if(request.readyState===XMLHttpRequest.DONE)
