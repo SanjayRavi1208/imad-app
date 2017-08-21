@@ -100,6 +100,14 @@ app.get('/:articleName',function(req,res)
     var articleName=req.params.articleName;
       res.send(createTemplate(articles[articleName]));
 });
+var names=[];
+app.get('/sub-name/:name',function(req,res)
+{
+    var nam=req.params.name;
+    names.push(nam);
+    res.send(JSON.stringify(names));
+    
+});
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
