@@ -18,12 +18,15 @@ button.onclick=function()
 {
     console.log("FUCKKK");
     var request=new XMLHttpRequest();
+    t
     request.onreadystatechange=function()
     {
         if(request.readyState===XMLHttpRequest.DONE)
         {
             if(request.status===200)
-               { var counter=request.responseText;
+               { 
+                   console.log('jhgjshdgjfsh');
+                   var counter=request.responseText;
                 var span=document.getElementById('count');
                 span.innerHTML=counter.toString();
                }
