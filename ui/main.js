@@ -30,16 +30,27 @@ button.onclick=function()
     request.send(null);
 };
 var submit=document.getElementById('sub');
+var change=document.getElementById('uld');
 var nameinput=document.getElementById('frm');
 var inputname=nameinput.value;
 sub.onclick=function()
 {
-    var arr=['sanjay','arsath','sathvik'];
-    var name=document.getElementById('uld');
-    var list='';
-    for(var i=0;i<arr.length;i++)
+    var req=new XMLHttpRequest();
+    req.onreadystatechange=function()
     {
-        list+='<li>'+arr[i]+'</li>';
+        if(request.readystate==XMLHttpRequest.DONE&&request.status===200)
+        {
+            var text=req.responseText;
+            text=JSON.parse(text);
+            var list='';
+            for(var i=0;i<text.length;i++)
+            {
+                list+='<li>'+text[i]+'</li>';
+            }
+            change.innerHTML=list;
+            
+        }
     }
-    name.innerHTML=list;
+    request.open('GET','http://sanjaykr1208.imad.hasura-app.io/sub-name?name='+nameinput,true);
+    request.send(null);
 };
