@@ -30,6 +30,8 @@ button.onclick=function()
     request.send(null);
 };
 var submit=document.getElementById('sub');
+var nameinput=document.getElementById('frm');
+var inputname=nameinput.value;
 sub.onclick=function()
 {
     var arr=['sanjay','arsath','sathvik'];
