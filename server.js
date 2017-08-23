@@ -11,50 +11,6 @@ var config={
 };
 var app = express();
 app.use(morgan('combined'));
-var articles={
-    'article-one':{
-    title:'Article-One',
-    heading:'Article-1',
-    date:'Aug-20-2017',
-    content:` <p>
-                This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.
-            </p>
-            <p>
-                This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.
-            </p>
-            <p>
-                This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.
-            </p>`
-},
-    'article-two':{
-    title:'Article-Two',
-    heading:'Article-2',
-    date:'Aug-21-2017',
-    content:` <p>
-                This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.
-            </p>
-            <p>
-                This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.
-            </p>
-            <p>
-                This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.
-            </p>`
-},
-    'article-three':{
-    title:'Article-Three',
-    heading:'Article-3',
-    date:'Aug-22-2017',
-    content:` <p>
-                This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.
-            </p>
-            <p>
-                This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.
-            </p>
-            <p>
-                This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.This is the Url that i made.
-            </p>`
-}
-};
 function createTemplate(data)
 {
     var title=data.title;
