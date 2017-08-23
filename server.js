@@ -128,7 +128,7 @@ app.get('/sub-name',function(req,res)
 app.get('/articles/:articleName',function(req,res)
 {
     //var articledata=
-    pool.query('SELECT * FROM article WHERE title ='+req.params.articleName,function(err,result)
+    pool.query("SELECT * FROM article WHERE title ='"+req.params.articleName+"'",function(err,result)
     {
         if(err){
             res.status(500).send(err.toString());
@@ -142,7 +142,7 @@ app.get('/articles/:articleName',function(req,res)
             else
             {
                 var articleData=result.rows[0];
-                res.send(createTemplate(articledata));
+                    res.send(createTemplate(articledata));
             }
         }
     });
