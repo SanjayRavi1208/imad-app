@@ -15,6 +15,18 @@ sansa.onclick=function()
 };
 
     var request=new XMLHttpRequest();
+    request.onreadystatechange=function()
+    {
+        if(request.readyState===XMLHttpRequest.DONE&&request.status===200)
+        {
+                   var counter=request.responseText;
+                   counter=JSON.parse(counter);
+                   var count1=counter[0];
+                   update=count1['count'];
+                   var span=document.getElementById('count');
+                   span.innerHTML=update.toString();
+        }
+    };
     request.open('GET','http://sanjaykr1208.imad.hasura-app.io/test-db',true);
     request.send(null);
 
