@@ -43,7 +43,8 @@ button.onclick=function()
                    var counter=request.responseText;
                    counter=JSON.parse(counter);
                    var count1=counter[0];
-                   update=count1['.count'];
+                   var man='count';
+                   update=count1[man];
                    var span=document.getElementById('count');
                    span.innerHTML=update.toString();
         }
