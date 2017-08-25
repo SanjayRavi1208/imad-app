@@ -67,11 +67,21 @@ app.get('/test-db', function (req, res)
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
-var counter=0;
+//var counter=0;
 app.get('/counter',function(req,res)
 {
-    counter=counter+1;
-    res.send(counter.toString());
+    pool.query('SELECT count FROM counter where id=1',function(err,result)
+    {
+        if(err){
+            res.status(500).send(err.toString());
+        }
+        else
+        {
+            res.send(JSON.stringify(result.rows));
+        }
+    });
+   // counter=counter+1;
+   // res.send(counter.toString());
 });
 var names=[];
 app.get('/sub-name',function(req,res)
