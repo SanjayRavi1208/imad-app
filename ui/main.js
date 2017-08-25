@@ -24,7 +24,7 @@ button.onclick=function()
                    var counter=request.responseText;
                    counter=JSON.parse(counter);
                    var count=counter[0];
-                   console.log(counter[0]);
+                   console.log(counter[0][0]);
                    var span=document.getElementById('count');
                    span.innerHTML=count;
         }
