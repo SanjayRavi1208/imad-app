@@ -75,6 +75,10 @@ app.get('/counter',function(req,res)
         if(err){
             res.status(500).send(err.toString());
         }
+          if(result.rows.length===0)
+            {
+                res.status(404).send('Article Not found');
+            }
         else
         {
             res.send(JSON.stringify(result.rows));
