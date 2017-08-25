@@ -70,7 +70,7 @@ app.get('/ui/main.js', function (req, res) {
 //var counter=0;
 app.get('/counter',function(req,res)
 {
-    pool.query("UPDATE counter SET id = 1, count = 1 WHERE id = 1 AND count = 0",function(err,result)
+    pool.query("select * from counter",function(err,result)
     {
         if(err){
             res.status(500).send(err.toString());
