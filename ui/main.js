@@ -23,8 +23,8 @@ button.onclick=function()
         {
                    var counter=request.responseText;
                    counter=JSON.parse(counter);
-                   var count=counter[0];
-                   console.log(count[count]);
+                   var count1=counter[0];
+                   console.log(count1[count]);
                    var span=document.getElementById('count');
                    span.innerHTML=count;
         }
