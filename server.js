@@ -48,6 +48,7 @@ function createTemplate(data)
 }
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+  console.log('man');
 });
 var pool=new Pool(config);
 
