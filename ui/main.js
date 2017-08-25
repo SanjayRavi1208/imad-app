@@ -13,6 +13,13 @@ sansa.onclick=function()
 {
     var interval=setInterval(moveRight,500);
 };
+
+    var request=new XMLHttpRequest();
+    request.open('GET','http://sanjaykr1208.imad.hasura-app.io/test-db',true);
+    request.send(null);
+
+
+
 var button=document.getElementById('counter');
 button.onclick=function()
 {
