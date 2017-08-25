@@ -72,7 +72,6 @@ app.get('/test-db', function (req, res)
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
-//var counter=0;
 app.get('/counter',function(req,res)
 {
     pool.query("update counter set count=count+1 where id=1",function(err,result)
@@ -81,7 +80,7 @@ app.get('/counter',function(req,res)
             res.status(500).send(err.toString());
         }
     });
-    pool.query("select count from counter where id=1",function(err,result)
+/*    pool.query("select count from counter where id=1",function(err,result)
     {
         if(err){
             res.status(500).send(err.toString());
@@ -94,9 +93,11 @@ app.get('/counter',function(req,res)
         {
             res.send(JSON.stringify(result.rows));
         }
-    });
-   // counter=counter+1;
-   // res.send(counter.toString());
+    });*/
+    var request=new XMLHttpRequest();
+    request.open('GET','http://sanjaykr1208.imad.hasura-app.io/test-db',true);
+    request.send(null);
+
 });
 var names=[];
 app.get('/sub-name',function(req,res)
