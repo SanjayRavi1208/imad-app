@@ -70,7 +70,13 @@ app.get('/ui/main.js', function (req, res) {
 //var counter=0;
 app.get('/counter',function(req,res)
 {
-    pool.query("update counter set count=1 where id=1;select count from counter where id=1",function(err,result)
+    pool.query("update counter set count=1 where id=1",function(err,result)
+    {
+        if(err){
+            res.status(500).send(err.toString());
+        }
+    });
+    pool.query("select count from counter where id=1",function(err,result)
     {
         if(err){
             res.status(500).send(err.toString());
