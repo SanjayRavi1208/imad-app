@@ -22,9 +22,9 @@ button.onclick=function()
         if(request.readyState===XMLHttpRequest.DONE&&request.status===200)
         {
                    var counter=request.responseText;
-                   console.log(counter);
                    counter=JSON.parse(text);
                    var count=counter[0];
+                   console.log(counter[0]);
                    var span=document.getElementById('count');
                    span.innerHTML=count;
         }
