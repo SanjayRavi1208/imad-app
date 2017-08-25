@@ -44,9 +44,7 @@ button.onclick=function()
                    update=count1[man];
                    var span=document.getElementById('count');
                    span.innerHTML=update.toString();
-                    app.get('/', function (req, res) {
-                res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
+                    
         }
     };
     request.open('GET','http://sanjaykr1208.imad.hasura-app.io/counter',true);
