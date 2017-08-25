@@ -25,13 +25,13 @@ request.onreadystatechange=function()
                update=count1['count'];
                var span=document.getElementById('count');
                span.innerHTML=update.toString();
+               var req=new XMLHttpRequest();
+               req.open('GET','http://sanjaykr1208.imad.hasura-app.io',true);
+               req.send(null);
     }
 };
 request.open('GET','http://sanjaykr1208.imad.hasura-app.io/test-db',true);
 request.send(null);
-
-
-
 var button=document.getElementById('counter');
 button.onclick=function()
 {
