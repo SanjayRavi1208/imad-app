@@ -80,7 +80,7 @@ app.get('/counter',function(req,res)
             res.status(500).send(err.toString());
         }
     });
-/*    pool.query("select count from counter where id=1",function(err,result)
+   pool.query("select count from counter where id=1",function(err,result)
     {
         if(err){
             res.status(500).send(err.toString());
@@ -93,11 +93,7 @@ app.get('/counter',function(req,res)
         {
             res.send(JSON.stringify(result.rows));
         }
-    });*/
-    var request=new XMLHttpRequest();
-    request.open('GET','http://sanjaykr1208.imad.hasura-app.io/test-db',true);
-    request.send(null);
-
+    });
 });
 var names=[];
 app.get('/sub-name',function(req,res)
