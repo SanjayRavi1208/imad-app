@@ -63,7 +63,23 @@ app.get('/hash/:input',function(req,res){
     res.send(hashedString);
 });
 var pool=new Pool(config);
-
+app.post('/createuser',function(req,res)
+{
+   var username=req.body.username;
+   var password=req.body.password;
+   var salt=crypto.getRandomBytes(128).toString();
+   var dbstring=hash(password,salt);
+   pool.query('INSERT INTO "user" (username,password) VALUES ($1,$2)',[username],[password],function(err,result)
+    {
+        if(err){
+            res.status(500).send(err.toString());
+        }
+        else
+        {
+            res.send('User sucessfully created : '+username);
+        }
+    });
+});
 app.get('/test-db', function (req, res)
 {
     pool.query("select count from counter where id=1",function(err,result)
