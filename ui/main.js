@@ -102,6 +102,7 @@ login.onclick=function()
     };
     var username=document.getElementById('username').value;
     var password=document.getElementById('pass').value;
+    console.log(password);
     log.open('POST','http://sanjaykr1208.imad.hasura-app.io/login',true);
     log.setRequestHeader('Content-Type','application/json');
     log.send(JSON.stringify({username:username,password:password}));
