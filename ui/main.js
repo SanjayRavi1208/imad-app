@@ -78,7 +78,7 @@ submit.onclick=function()
     request.open('GET','http://sanjaykr1208.imad.hasura-app.io/sub-name?name='+name1,true);
     request.send(null);
 };
-var login=document.getElementById('subpass');
+var log=document.getElementById('subpass');
 log.onclick=function()
 {
     var log=new XMLHttpRequest();
