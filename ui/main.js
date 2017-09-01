@@ -81,7 +81,7 @@ submit.onclick=function()
 var login=document.getElementById('subpass');
 login.onclick=function()
 {
-    var login=new XMLHttpRequest();
+    var log=new XMLHttpRequest();
     log.onreadystatechange=function()
     {
         if(log.readyState===XMLHttpRequest.DONE)
