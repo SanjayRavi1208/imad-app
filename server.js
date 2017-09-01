@@ -91,7 +91,24 @@ app.post('/login',function(req,res)
         }
         else
         {
-            res.send('User sucessfully created : '+username);
+            if(result.rows.length===0)
+            {
+                res.send(403).send("Username does not Exists!!!");
+            }
+            else
+            {
+                var dbstring=result.rows[0].password;
+                var salt=dbstring.split('$')[2];
+                var hashed=hash(password,salt);
+                if(hashed===dbstring)
+                {
+                    res.send("credentials Coreect!!!!");
+                }
+                else
+                {
+                    res.send("Hey u r not the user!!!!");
+                }
+            }
         }
     });
 });
