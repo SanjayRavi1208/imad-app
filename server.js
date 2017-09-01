@@ -129,6 +129,11 @@ app.get('/check-login',function(req,res)
         res.send('You are restricted!!!');
     }
 });
+app.get('/logout',function(req,res)
+{
+    delete req.session.auth;
+    res.send("You are logged out!!!!");
+});
 app.get('/test-db', function (req, res)
 {
     pool.query("select count,username,password,id from counter1 where id=1",function(err,result)
