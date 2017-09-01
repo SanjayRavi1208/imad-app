@@ -103,11 +103,11 @@ app.post('/login',function(req,res)
             {
                 var dbstring=result.rows[0].password;
                 var salt=dbstring.split('$')[2];
-                var hashed=hash(password,salt);
+               // var hashed=hash(password,salt);
                 if(hashed===dbstring)
                 {
                     //set session
-                    req.session.auth={userId:result.rows[0].id};
+                 //   req.session.auth={userId:result.rows[0].id};
                     res.send("credentials Coreect!!!!");
                 }
                 else
