@@ -94,7 +94,7 @@ login.onclick=function()
             {
                 alert('Forbidden');
             }
-            else if(log.status===500)
+            else
             {
                 alert('UNknown error Occured');
             }
