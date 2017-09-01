@@ -92,12 +92,14 @@ app.post('/login',function(req,res)
     {
         if(err){
             res.status(500).send(err.toString());
+            console.log("man");
         }
         else
         {
             if(result.rows.length===0)
             {
                 res.send(403).send("Username does not Exists!!!");
+                console.log("woman");
             }
             else
             {
@@ -113,6 +115,7 @@ app.post('/login',function(req,res)
                 else
                 {
                     res.send(403).send("Hey u r not the user!!!!");
+                    console.log("gents");
                 }
             }
         }
