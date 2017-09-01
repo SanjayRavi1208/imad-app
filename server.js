@@ -4,6 +4,7 @@ var path = require('path');
 var Pool=require('pg').Pool;
 var crypto=require('crypto');
 var bodyParser=require('body-parser');
+var session=require('express-session');
 var config={
   user:'sanjaykr1208',
   databse:'sanjaykr1208',
@@ -14,6 +15,10 @@ var config={
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+app.use(session({
+    secret:"someRandomSecretValue",
+    cookie:{maxAge:1000*60*60*24*30}
+}));
 function createTemplate(data)
 {
     var title=data.title;
@@ -101,6 +106,8 @@ app.post('/login',function(req,res)
                 var hashed=hash(password,salt);
                 if(hashed===dbstring)
                 {
+                    //set session
+                    req.session.auth={userId:result.rows[0].id};
                     res.send("credentials Coreect!!!!");
                 }
                 else
