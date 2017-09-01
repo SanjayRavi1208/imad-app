@@ -82,7 +82,7 @@ app.post('/createuser',function(req,res)
 });
 app.get('/test-db', function (req, res)
 {
-    pool.query("select count from counter where id=1",function(err,result)
+    pool.query("select count from counter1 where id=1",function(err,result)
     {
         if(err){
             res.status(500).send(err.toString());
