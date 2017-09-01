@@ -79,7 +79,7 @@ submit.onclick=function()
     request.send(null);
 };
 var login=document.getElementById('subpass');
-login.onclick=function()
+log.onclick=function()
 {
     var log=new XMLHttpRequest();
     log.onreadystatechange=function()
