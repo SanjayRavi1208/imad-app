@@ -10,7 +10,10 @@ body {
 .text-big {
     font-size: 300%;
 }
-
+.pass
+{
+    background-color:yellow;
+}
 .bold {
     font-weight: bold;
 }
