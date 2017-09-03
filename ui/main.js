@@ -10,7 +10,7 @@ register.onclick=function()
         {
             if(log.status===200)
             {
-                alert('Login Sucessful ');
+                alert('Registration Sucessful ');
             }   
             else if(log.status===403)
             {
@@ -18,7 +18,7 @@ register.onclick=function()
             }
             else
             {
-                alert('UNknown error Occured');
+                alert('Unknown error Occured!!!Try Again...');
             }
         }
     };
