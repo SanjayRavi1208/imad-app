@@ -24,7 +24,7 @@ register.onclick=function()
     };
     var username=document.getElementById('username').value;
     var password=document.getElementById('pass').value;
-    log.open('POST','http://sanjaykr1208.imad.hasura-app.io/create-user',true);
+    log.open('POST','http://sanjaykr1208.imad.hasura-app.io/createuser',true);
     log.setRequestHeader('Content-Type','application/json');
     log.send(JSON.stringify({username:username,password:password}));
 };
