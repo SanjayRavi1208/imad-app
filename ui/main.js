@@ -1,7 +1,7 @@
 console.log('Loaded!');
 //Moving Image
-var login=document.getElementById('subpass');
-login.onclick=function()
+var register=document.getElementById('reg');
+register.onclick=function()
 {
     var log=new XMLHttpRequest();
     log.onreadystatechange=function()
