@@ -46,7 +46,7 @@ login.onclick=function()
             }
             else
             {
-                alert('Unknown error Occured!!!Try Again...');
+                alert('Password Incorrect');
             }
         }
     };
