@@ -26,7 +26,7 @@ register.onclick=function()
     var password=document.getElementById('pass').value;
     log.open('POST','http://sanjaykr1208.imad.hasura-app.io/createuser',true);
     log.setRequestHeader('Content-Type','application/json');
-    log.send(JSON.stringify({username:username,password:password}));
+    log.send(JSON.stringify({"username":username,"password":password}));
 };
 var login=document.getElementById('log');
 login.onclick=function()
@@ -54,5 +54,5 @@ login.onclick=function()
     var password=document.getElementById('pass').value;
     log.open('POST','http://sanjaykr1208.imad.hasura-app.io/login',true);
     log.setRequestHeader('Content-Type','application/json');
-    log.send(JSON.stringify({username:username,password:password}));
+    log.send(JSON.stringify({"username":username,"password":password}));
 };
