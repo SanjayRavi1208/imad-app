@@ -157,29 +157,6 @@ app.get('/test-db', function (req, res)
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
-app.get('/counter',function(req,res)
-{
-    pool.query("update counter set count=count+1 where id=1",function(err,result)
-    {
-        if(err){
-            res.status(500).send(err.toString());
-        }
-    });
-   pool.query("select count from counter where id=1",function(err,result)
-    {
-        if(err){
-            res.status(500).send(err.toString());
-        }
-          if(result.rows.length===0)
-            {
-                res.status(404).send('Article Not found');
-            }
-        else
-        {
-            res.send(JSON.stringify(result.rows));
-        }
-    });
-});
 var names=[];
 app.get('/sub-name',function(req,res)
 {
