@@ -84,7 +84,6 @@ app.post('/createuser',function(req,res)
         }
     });
 });
- console.log('jahgjhasd');
 app.post('/login',function(req,res)
 {
     console.log('jahgjhasd');
